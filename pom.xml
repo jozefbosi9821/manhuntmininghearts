@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.manhuntmininghearts</groupId>
+  <artifactId>_jozefmods_</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>manhuntmininghearts</name>
+
+    <description>This is a plugin by Jozef Gaming that makes it so when a hunter breaks blocks the speedrunner gets
+        health
+    </description>
+    <properties>
+    <java.version>1.8</java.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+    <url>jozefgamer.000webhostapp.com</url>
+
+    <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.2.4</version>
+        <executions>
+          <execution>
+              <configuration>
+                  <outputFile>C:\Users\jozef\OneDrive\Desktop\test\plugins\Manhunt_but_1.0.jar</outputFile>
+              </configuration>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
+  </build>
+
+  <repositories>
+      <repository>
+          <id>placeholderapi</id>
+          <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
+      </repository>
+      <repository>
+          <id>spigotmc-repo</id>
+          <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+      </repository>
+      <repository>
+          <id>sonatype</id>
+          <url>https://oss.sonatype.org/content/groups/public/</url>
+      </repository>
+  </repositories>
+
+  <dependencies>
+      <dependency>
+          <groupId>com.connorlinfoot</groupId>
+          <artifactId>actionbarapi</artifactId>
+          <version>1.5.4</version>
+          <scope>system</scope>
+          <systemPath>${project.basedir}/dependecy/actionbarapi-1.5.4.jar</systemPath>
+      </dependency>
+
+      <dependency>
+          <groupId>me.clip</groupId>
+          <artifactId>placeholderapi</artifactId>
+          <version>2.11.1</version>
+          <scope>provided</scope>
+      </dependency>
+      <dependency>
+          <groupId>org.spigotmc</groupId>
+          <artifactId>spigot-api</artifactId>
+          <version>1.20.4-R0.1-SNAPSHOT</version>
+          <scope>provided</scope>
+      </dependency>
+  </dependencies>
+</project>

@@ -1,0 +1,35 @@
+name: manhuntmininghearts
+version: 1.0
+main: org.manhuntmininghearts._jozefmods_.ManhuntMiningHearts
+api-version: '1.20'
+prefix: [Manhunt but]
+authors: [Jozef Gaming]
+description: This is a plugin by Jozef Gaming that makes it so when a hunter breaks blocks the speedrunner gets health
+website: jozefgamer.000webhostapp.com
+
+commands:
+  addhunter:
+    description: Add a player to the Hunter team.
+    usage: /addhunter <player>
+    permission: manhunt.leader
+  removehunter:
+    description: Remove a player from the Hunter team.
+    usage: /removehunter <player>
+    permission: manhunt.leader
+  addspeedrunner:
+    description: Add a player to the Speedrunner team.
+    usage: /addspeedrunner <player>
+    permission: manhunt.leader
+  removespeedrunner:
+    description: Remove a player from the Speedrunner team.
+    usage: /removespeedrunner <player>
+    permission: manhunt.leader
+  manhuntteams:
+    description: Remove all players from their teams and reload teams.
+    usage: /manhuntteams reload
+    permission: manhunt.leader
+
+permissions:
+  manhunt.leader:
+    description: Allows the player to manage teams in Manhunt.
+    default: op
